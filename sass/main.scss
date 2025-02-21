@@ -1,0 +1,71 @@
+@forward "./reset";
+
+// *** Variables ***
+// *** Mixins ***
+// *** Main Styles ***
+
+body {
+	width: 100%;
+	height: 100vh;
+	background: linear-gradient(
+			to right,
+			rgba(0, 0, 0, 0.7),
+			rgba(0, 0, 0, 0.7)
+		),
+		url("../caique-nascimento-Ij24Uq1sMwM-unsplash.jpg") no-repeat center
+			center / cover;
+
+	filter: contrast(10);
+
+	font-family: "Roboto", serif;
+}
+
+.heading__secondary {
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	transform: translate(-50%, 30%);
+
+	color: #000;
+
+	font: {
+		size: 15rem;
+		weight: 700;
+	}
+
+	text-shadow: 0.4rem 0.4rem 12rem rgb(255, 255, 255, 1),
+		0.4rem 0.4rem 12rem rgba(255, 255, 255, 01),
+		0.4rem 0.4rem 12rem rgba(255, 255, 255, 0.1),
+		0.4rem 0.4rem 12rem rgba(255, 255, 255, 0.1);
+
+	@media (max-width: 600px) {
+		font-size: 10rem;
+	}
+}
+
+.heading__secondary--01 {
+	animation: gooey-text 4s infinite alternate-reverse;
+}
+.heading__secondary--02 {
+	animation: gooey-text 4s infinite alternate;
+}
+
+@keyframes gooey-text {
+	0% {
+		opacity: 0;
+		filter: blur(2rem);
+	}
+
+	10% {
+		opacity: 0;
+	}
+
+	90% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 1;
+		filter: blur(0.3rem);
+	}
+}
