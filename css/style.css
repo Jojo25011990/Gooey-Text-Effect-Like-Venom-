@@ -96,6 +96,9 @@ body {
 @media (max-width: 600px) {
   .heading__secondary {
     font-size: 10rem;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, 35%);
   }
 }
 
